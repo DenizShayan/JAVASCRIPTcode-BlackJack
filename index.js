@@ -4,10 +4,24 @@ let secondCard= Math.floor(Math.random() * 10 + 2);
 
 let sum = firstCard + secondCard;
 
+let hasBlackJack = false;
+
+let isAlive = true;
+
+let message = "" 
+
+function startGame(){}
+
 if(sum <= 20){
-    console.log("Do you want to draw a new card?")
-} else if(s === 21){
-    console.log("Hurray, you've got Blackjack 🎉");
+    message = "Do you want to draw a new card? 🤩"
+} else if(sum === 21){
+    message = "Hurray, you've got Blackjack 🎉"
+    hasBlackJack = true;
 } else{
-    console.log("you are out of the game!😭");
+    message = "you are out of the game!😭"
+    isAlive = false;
 }
+
+
+
+console.log(message);
